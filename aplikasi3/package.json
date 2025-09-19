@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "name": "aplikasi3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "serve": "node server.js"
+  
+  },
+  "author": "hafis",
+  "license": "ISC"
+}
