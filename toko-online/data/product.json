@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop Gaming",
+    "price": 15000000,
+    "description": "Laptop berforma tinggi untuk kebutuhan gaming anda"
+  },
+  {
+    "id": 2,
+    "name": "Smartphone Flagship",
+    "price": 12000000,
+    "description": "Smartphone dengan kamera berkualitas tinggi dan performa cepat"
+  },
+  {
+    "id": 3,
+    "name": "Headset Bluetooth",
+    "price": 750000,
+    "description": "Headset nirkabel dengan suara jernih dan bass mantap"
+  },
+  {
+    "id": 4,
+    "name": "Keyboard Mechanical",
+    "price": 950000,
+    "description": "Keyboard mechanical dengan switch tactile dan backlight RGB"
+  },
+  {
+    "id": 5,
+    "name": "Smartwatch",
+    "price": 2500000,
+    "description": "Jam tangan pintar dengan fitur kesehatan dan notifikasi"
+  },
+  {
+    "id": 6,
+    "name": "Drone Kamera",
+    "price": 5500000,
+    "description": "Drone dengan kamera 4K dan stabilisasi gimbal"
+  },
+  {
+    "id": 7,
+    "name": "Speaker Portable",
+    "price": 1200000,
+    "description": "Speaker Bluetooth portable dengan suara berkualitas tinggi"
+  },
+  {
+    "id": 8,
+    "name": "Monitor 27 Inch",
+    "price": 4000000,
+    "description": "Monitor Full HD 27 inci dengan refresh rate tinggi"
+  },
+  {
+    "id": 9,
+    "name": "Kamera DSLR",
+    "price": 8500000,
+    "description": "Kamera DSLR profesional untuk fotografi berkualitas"
+  },
+  {
+    "id": 10,
+    "name": "Mouse Gaming",
+    "price": 650000,
+    "description": "Mouse gaming dengan DPI tinggi dan desain ergonomis"
+  },
+  {
+    "id": 11,
+    "name": "Powerbank 20000mAh",
+    "price": 500000,
+    "description": "Powerbank kapasitas besar dengan pengisian cepat"
+  },
+  {
+    "id": 12,
+    "name": "Tablet Android",
+    "price": 4500000,
+    "description": "Tablet Android dengan layar besar dan performa cepat"
+  },
+  {
+    "id": 13,
+    "name": "Smart TV 43 Inch",
+    "price": 5200000,
+    "description": "Smart TV dengan resolusi 4K dan fitur streaming"
+  },
+  {
+    "id": 14,
+    "name": "Kulkas 2 Pintu",
+    "price": 3700000,
+    "description": "Kulkas hemat energi dengan kapasitas besar"
+  },
+  {
+    "id": 15,
+    "name": "Mesin Cuci Otomatis",
+    "price": 4200000,
+    "description": "Mesin cuci dengan berbagai mode pencucian otomatis"
+  },
+  {
+    "id": 16,
+    "name": "AC Inverter",
+    "price": 6000000,
+    "description": "AC hemat listrik dengan pendinginan cepat"
+  },
+  {
+    "id": 17,
+    "name": "Kamera Action",
+    "price": 1800000,
+    "description": "Kamera action tahan air untuk aktivitas outdoor"
+  },
+  {
+    "id": 18,
+    "name": "Vacuum Cleaner",
+    "price": 1500000,
+    "description": "Vacuum cleaner portable dengan daya hisap kuat"
+  },
+  {
+    "id": 19,
+    "name": "Printer Wireless",
+    "price": 2100000,
+    "description": "Printer dengan koneksi nirkabel dan hemat tinta"
+  },
+  {
+    "id": 20,
+    "name": "Smart Lamp",
+    "price": 400000,
+    "description": "Lampu pintar dengan kontrol via aplikasi dan suara"
+  }
+]
