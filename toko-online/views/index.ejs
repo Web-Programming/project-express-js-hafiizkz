@@ -1,1 +1,26 @@
-<% layout('layout')%>
+<% layout('layout') %>
+
+<div class="container mt-5">
+  <h1 class="text-center"><%= title %></h1>
+
+  <% if (query) { %>
+    <p class="text-center">Menampilkan hasil pencarian untuk: "<%= query %>"</p>
+  <% } %>
+
+  <div class="row">
+    <% if (products.length === 0) { %>
+      <p class="text-center">Produk tidak ditemukan.</p>
+    <% } else { %>
+      <% products.forEach(product => { %>
+        <div class="col-md-4 mb-4">
+          <div class="card" onclick="window.location='/product/<%= product.id %>'" style="cursor: pointer;">
+            <div class="card-body">
+              <h4 class="card-title"><%= product.name %></h4>
+              <p class="card-text"><%= product.description %></p>
+            </div>
+          </div>
+        </div>
+      <% }); %>
+    <% } %>
+  </div>  
+</div>
