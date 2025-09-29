@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title || "Toko Online" %></title>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+</head>
+<body class="bg-white"> <!-- ubah background jadi putih -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light"> <!-- navbar terang -->
+    <div class="container">
+      <a class="navbar-brand" href="/">Toko Online</a>
+
+      <!-- Tambahan menu Home & About Me -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Me</a>
+        </li>
+      </ul>
+
+      <!-- Form pencarian -->
+      <form class="d-flex" method="get" action="/search">
+        <input 
+          class="form-control me-2" 
+          type="search" 
+          name="q" 
+          placeholder="Cari produk..." 
+          value="<%= typeof query !== 'undefined' && query ? query : '' %>">
+        <button class="btn btn-outline-success" type="submit">Cari</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <%- body %>
+  </div>
+</body>
+</html>

@@ -1,18 +1,15 @@
-var express = require('express');
-var router = express.Router();
-var products = require('../data/products.json');
+// app_toko_online/controllers/main.js
+var products = require('../../data/products.json');
 
-/* GET home page. */
-router.get('/', function (req, res, next) {
+const index = (req, res) => {
   res.render('index', {
-    title: '',
+    title: 'Toko Online Sederhana',
     products: products,
-    query: null // biar bisa dipakai di view
+    query: null // supaya input pencarian tetap ada
   });
-});
+};
 
-/* GET search page. */
-router.get('/search', function (req, res, next) {
+const search = (req, res) => {
   const q = req.query.q ? req.query.q.toLowerCase() : "";
 
   let filteredProducts;
@@ -29,6 +26,10 @@ router.get('/search', function (req, res, next) {
     products: filteredProducts,
     query: q
   });
-});
+};
 
-module.exports = router;
+// export biar bisa dipanggil di routes/index.js
+module.exports = {
+  index,
+  search
+};
