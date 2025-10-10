@@ -1,35 +1,30 @@
-// app_toko_online/controllers/main.js
-var products = require('../../data/products.json');
+const products = require("../../data/products.json");
 
-const index = (req, res) => {
-  res.render('index', {
-    title: 'Toko Online Sederhana',
-    products: products,
-    query: null // supaya input pencarian tetap ada
-  });
-};
+/* GET home page */
+// const index = (req, res) => {
+//   res.render("index", {
+//     title: "Toko Online Sederhana",
+//     products: products,   // ✅ konsisten
+//     query: ""             // default kosong
+//   });
+// };
 
+/* GET search */
 const search = (req, res) => {
-  const q = req.query.q ? req.query.q.toLowerCase() : "";
+  let q = req.query.q ? req.query.q.toLowerCase() : "";
+  let filtered = products;
 
-  let filteredProducts;
-  if (!q) {
-    filteredProducts = products; // jika query kosong tampilkan semua
-  } else {
-    filteredProducts = products.filter(p =>
+  if (q) {
+    filtered = products.filter(p =>
       p.name.toLowerCase().includes(q)
     );
   }
 
-  res.render('index', {
-    title: 'Hasil Pencarian',
-    products: filteredProducts,
-    query: q
+  res.render("index", {
+    title: "Toko Online Sederhana",
+    products: filtered,
+    query: req.query.q || ""
   });
 };
 
-// export biar bisa dipanggil di routes/index.js
-module.exports = {
-  index,
-  search
-};
+module.exports = { search };
