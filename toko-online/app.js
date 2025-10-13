@@ -7,7 +7,7 @@ var engine = require('ejs-blocks');// menggunkkan ejs block
 var mongoose = require('mongoose');
 
 require('./app_toko_online/models/db'); // koneksi ke database
-
+var apiProductRouter = require("./app_toko_online/routes/api/product"); //import router 
 var indexRouter = require('./app_toko_online/routes/index');
 var usersRouter = require('./app_toko_online/routes/users');
 var productRouter = require("./app_toko_online/routes/product");
@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bootstraps',express.static(path.join(__dirname, 'node_modules/bootstrap/dist')))
-
+app.use("/api/produk", apiProductRouter);//daftarkan router api
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
