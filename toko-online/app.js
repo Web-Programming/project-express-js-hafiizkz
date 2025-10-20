@@ -14,6 +14,9 @@ var usersRouter = require('./app_toko_online/routes/users');
 var productRouter = require("./app_toko_online/routes/product");
 var apiUserRouter = require("./app_toko_online/routes/api/user");
 
+// ✅ Tambahan: require untuk order router
+var orderRouter = require("./app_toko_online/routes/api/order");
+
 var app = express();
 
 // view engine setup
@@ -33,6 +36,8 @@ app.use("/api/produk", apiProductRouter);
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/product", productRouter);
+app.use('/api/order', orderRouter); // ✅ Tambahan: daftarkan order router
+
 // kalau kamu juga mau daftarkan api user
 app.use("/api/user", apiUserRouter);
 

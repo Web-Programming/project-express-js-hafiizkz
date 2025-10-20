@@ -1,0 +1,31 @@
+### GET All Orders
+GET http://localhost:3000/api/order
+
+### Create New Order
+POST http://localhost:3000/api/order
+Content-Type: application/json
+
+{
+    "user": "68f5d51415d4d143f7187772",
+    "orderItems": [
+        {
+            "product": "68ecc2774d49272f5636f31f",
+            "quantity": 2,
+            "priceAtOrder": 150000
+        }
+    ]
+}
+
+### GET Order Detail by ID
+GET http://localhost:3000/api/order/ORDER_ID_HERE
+
+### Update Order Status
+PUT http://localhost:3000/api/order/ORDER_ID_HERE
+Content-Type: application/json
+
+{
+    "status": "Shipped"
+}
+
+### Delete Order
+DELETE http://localhost:3000/api/order/ORDER_ID_HERE

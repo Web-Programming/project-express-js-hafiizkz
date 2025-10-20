@@ -4,13 +4,12 @@ const ProductSchema = new mongoose.Schema({
     name: {
         type: String,
         required: [true, 'Nama Produk Harus di Isi'],
-        // untuk menghilangkan spasi di awal dan akhir
-        trim: true,
+        trim: true, // untuk menghilangkan spasi di awal dan akhir
     },
-    price:{
+    price: {
         type: Number,
         required: [true, "Harga produk harus di isi"],
-        min: [1000, "Harga produk harus 1000"]
+        min: [1000, "Harga produk harus minimal 1000"]
     },
     description: {
         type: String,
@@ -18,14 +17,13 @@ const ProductSchema = new mongoose.Schema({
     },
     stock: {
         type: Number,
-        default: 0 // Nilai bawakan 0
+        default: 0 // Nilai bawaan 0
     },
-    createAt : {
+    createAt: {
         type: Date,
-        default: Date.now()
+        default: Date.now
     }
-})
+});
 
-const Product = mongoose.model('Product', ProductSchema);
-
-module.exports = Product;
+// ✅ Gunakan 1 baris ini saja, aman dari OverwriteModelError
+module.exports = mongoose.models.Product || mongoose.model('Product', ProductSchema);
