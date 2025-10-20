@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Products = require("../models/product"); // model mongoose
+const Products = require("../models/product");
 
 // Tampilkan semua produk dari database
 router.get("/all", async (req, res, next) => {

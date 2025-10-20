@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const orderController = require('../../controllers/order');
+const auth = require('../middleware/authMiddleware');
 
 // Buat pesanan baru
-router.post('/', orderController.createOrder);
+router.post('/', auth.adminOnly, orderController.createOrder);
 
 // Ambil semua pesanan
 router.get('/', orderController.getAllOrders);

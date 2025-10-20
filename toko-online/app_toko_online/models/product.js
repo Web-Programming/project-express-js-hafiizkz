@@ -25,5 +25,5 @@ const ProductSchema = new mongoose.Schema({
     }
 });
 
-// ✅ Gunakan 1 baris ini saja, aman dari OverwriteModelError
+
 module.exports = mongoose.models.Product || mongoose.model('Product', ProductSchema);

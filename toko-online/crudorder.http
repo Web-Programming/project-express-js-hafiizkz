@@ -17,10 +17,10 @@ Content-Type: application/json
 }
 
 ### GET Order Detail by ID
-GET http://localhost:3000/api/order/ORDER_ID_HERE
+GET http://localhost:3000/api/order/68f5ec821d84862bb1b136cc
 
 ### Update Order Status
-PUT http://localhost:3000/api/order/ORDER_ID_HERE
+PUT http://localhost:3000/api/order/68f5ec821d84862bb1b136cc
 Content-Type: application/json
 
 {
@@ -28,4 +28,4 @@ Content-Type: application/json
 }
 
 ### Delete Order
-DELETE http://localhost:3000/api/order/ORDER_ID_HERE
+DELETE http://localhost:3000/api/order/ID

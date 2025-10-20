@@ -1,7 +1,6 @@
 const Order = require('../models/order');
-const Product = require('../models/Product'); // diasumsikan kamu punya model Product
+const Product = require('../models/product'); 
 
-// 🟢 CREATE Order
 const createOrder = async (req, res) => {
   try {
     const { user, orderItems } = req.body;
@@ -10,7 +9,7 @@ const createOrder = async (req, res) => {
       return res.status(400).json({ message: 'User dan orderItems wajib diisi' });
     }
 
-    // Hitung totalAmount berdasarkan orderItems
+    
     let totalAmount = 0;
     for (const item of orderItems) {
       totalAmount += item.priceAtOrder * item.quantity;
@@ -33,12 +32,12 @@ const createOrder = async (req, res) => {
   }
 };
 
-// 🟡 GET All Orders
+
 const getAllOrders = async (req, res) => {
   try {
     const orders = await Order.find()
-      .populate('user', 'username email') // hanya ambil field penting user
-      .populate('orderItems.product', 'name price'); // ambil info produk juga
+      .populate('user', 'username email') 
+      .populate('orderItems.product', 'name price'); 
 
     res.status(200).json({
       status: true,
@@ -50,7 +49,7 @@ const getAllOrders = async (req, res) => {
   }
 };
 
-// 🟡 GET Order by ID
+
 const getOrderById = async (req, res) => {
   try {
     const order = await Order.findById(req.params.id)
@@ -71,7 +70,7 @@ const getOrderById = async (req, res) => {
   }
 };
 
-// ✏️ UPDATE status pesanan
+
 const updateOrderStatus = async (req, res) => {
   try {
     const { status } = req.body;
@@ -96,7 +95,7 @@ const updateOrderStatus = async (req, res) => {
   }
 };
 
-// 🗑️ DELETE Order (opsional)
+
 const deleteOrder = async (req, res) => {
   try {
     const order = await Order.findByIdAndDelete(req.params.id);

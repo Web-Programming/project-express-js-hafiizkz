@@ -1,6 +1,5 @@
-const User = require("../models/User");
+const User = require("../models/user");
 
-// GET semua user
 const all = async (req, res) => {
   try {
     const users = await User.find({});
@@ -18,7 +17,6 @@ const all = async (req, res) => {
   }
 };
 
-// POST create user
 const createUser = async (req, res) => {
   try {
     const newUser = new User({
@@ -45,7 +43,6 @@ const createUser = async (req, res) => {
   }
 };
 
-// GET detail user by ID
 const detailUser = async (req, res) => {
   try {
     const userid = req.params.id;
@@ -72,7 +69,7 @@ const detailUser = async (req, res) => {
   }
 };
 
-// PUT update user by ID
+
 const updateUser = async (req, res) => {
   try {
     const user = await User.findByIdAndUpdate(req.params.id, req.body, {
@@ -101,7 +98,6 @@ const updateUser = async (req, res) => {
   }
 };
 
-// DELETE user by ID
 const destroy = async (req, res) => {
   try {
     const user = await User.findByIdAndDelete(req.params.id);

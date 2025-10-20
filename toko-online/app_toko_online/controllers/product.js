@@ -12,9 +12,10 @@ const index = async (req, res) => {
     res.status(500).send('gagal menampilkan produk');
   }
 }
-
+//
 const detail = async (req, res, next) => {
     try{
+  
         const productId = req.params.id;
         const product = await Products.findById(productId);
         

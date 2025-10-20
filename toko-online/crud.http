@@ -31,32 +31,3 @@ DELETE http://localhost:3000/api/produk/68ecc2774d49272f5636f31f
 
 
 
-
-### GET All User
-GET http://localhost:3000/api/user
-
-### Insert New Product
-POST http://localhost:3000/api/user
-content-type: application/json
-
-{
-    "name": "Keyboard",
-    "price": "1",
-    "description" : "Hyper sensitive keyboard",
-    "stock" : 1
-}
-
-### Detail Product
-GET http://localhost:3000/api/user/
-
-### Update Product
-PUT http://localhost:3000/api/user/
-content-type: application/json
-
-{
-    "price": "600000",
-    "stock" : 5
-}
-
-### Delete Product
-DELETE http://localhost:3000/api/user/
